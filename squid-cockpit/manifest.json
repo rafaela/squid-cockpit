@@ -1,0 +1,10 @@
+{
+    "version": 0,
+
+    "tools": {
+        "squid": {
+            "label": "Squid Proxy",
+            "path": "squid.html"
+        }
+    }
+}

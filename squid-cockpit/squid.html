@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <link href="../base1/cockpit.min.css" type="text/css" rel="stylesheet">
+    <link href="squid.css" type="text/css" rel="stylesheet">
+    <script src="../base1/cockpit.min.js"></script>
+    <title>Squid Proxy</title>
+  </head>
+  <body>
+	<h3>Configurando Squid Proxy</h3>
+	<span id="info"></span>
+        <form>
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="user" class="form-label">Usuário: </label>
+                    <input type="text" class="form-control" id="user">
+                </div>
+                <div class="campo">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senha">
+                </div>
+                <div class="campo">
+                    <button  class="botao" id="usuarios">Salvar</button>
+                </div>
+                    <pre id="output_usuario"></pre>
+                </div>
+            </fieldset>
+        </form>
+
+        <form>
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="nome">Nome: </label>
+                    <input type="text" class="form-control" id="nome">
+                </div>
+
+                <div class="campo">
+                    <label for="tipo">Tipo: </label>
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="tipo">
+                            <option selected>Selecione</option>
+                            <option value="url_regex">url_regex</option>
+                            <option value="time">time</option>
+                            <option value="src">src</option>
+                            <option value="proxy_auth">proxy_auth</option>
+                        </select>
+                </div>
+                <div class="campo">
+                    <label for="regra">Regra: </label>
+                    <input type="text" class="form-control" id="regra">
+                </div>
+                <div class="campo">
+                    <button class="botao" id="acls">Salvar</button>
+                </div>
+                <pre id="output_acl"></pre>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label>Permissão:</label>
+                    <label>
+                        <input type="radio" name="sexo" value="allow"> allow
+                    </label>
+                    <label>
+                        <input type="radio" name="sexo" value="deny"> deny
+                    </label>
+                </div>
+
+                <div class="campo">
+                    <label for="regraAcesso">Regra: </label>
+                    <input type="text" class="form-control" id="regraAcesso">
+                </div>
+
+                <div class="campo">
+                    <button class="botao" id="regras">Salvar</button>
+                </div>
+                <pre id="output_regra"></pre>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="memoria">Tipo: </label>
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="memoria">
+                            <option selected>Selecione</option>
+                            <option value="replay_body_max_size">replay_body_max_size</option>
+                            <option value="cache_mem">cache_mem</option>
+                            <option value="maximum_object_size_in_memory">maximum_object_size_in_memory</option>
+                            <option value="minimum_object_size_in_memory">minimum_object_size_in_memory</option>
+                            <option value="cache_dir">cache_dir</option>
+                            <option value="cache_swap_low">cache_swap_low</option>
+                            <option value="cache_swap_high">cache_swap_high</option>
+                            <option value="port">port</option>
+
+                        </select>
+                </div>
+
+                <div class="campo">
+                    <label for="tamanho">Valor: </label>
+                    <input type="text" class="form-control" id="tamanho">
+                </div>
+
+                <div class="campo">
+                    <button class="pf-c-button pf-m-primary" id="memorias">Salvar</button>
+                </div>
+                <pre id="output_memoria"></pre>
+            </fieldset>
+        </form>
+
+    <button type="button" class="botao" id="reiniciar">Iniciar Servico</button>
+    <pre id="output_reiniciar"></pre>
+
+    <button type="button" class="botao" id="parar">Parar Servico</button>
+    <pre id="output_parar"></pre>
+
+    <form>
+        <fieldset>
+            <legend>Configurações feitas</legend>
+            <ul id="lista">
+
+            </ul>
+        </fieldset>
+    </form>
+
+
+    <script src="squid.js"></script>
+
+
+  </body>
+</html>
+
