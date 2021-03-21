@@ -10,5 +10,5 @@ Requisitos
 instalação
 - Baixe o pacote rpm.
 - Acesse o diretório onde o pacote rpm se encontra.
-- Execute para instalar. # rpm -ihv cockpit-selinux-1-1.el8.noarch.rpm
+- Execute para instalar. # rpm -ihv squid-1-1.el8.noarch.rpm
 
